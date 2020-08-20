@@ -68,12 +68,12 @@ def get_tweets(api):
         exit()
 
     user = api.get_user("LZCOficial")
-    tweets = api.user_timeline(screen_name=user.screen_name, count=5, include_rts=True, exclude_replies=True, tweet_mode='extended')
+    tweets = api.user_timeline(screen_name=user.screen_name, count=10, include_rts=True, exclude_replies=True, tweet_mode='extended')
     return user, tweets[:3]
 
 
 def init_bot():
-    """Reads the RSS feed."""
+    """Initialize bots and read tweets."""
 
     # We create the Reddit instance.
     reddit = praw.Reddit(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, username=USERNAME, password=PASSWORD, user_agent="testscript by /u/larry3000bot")
