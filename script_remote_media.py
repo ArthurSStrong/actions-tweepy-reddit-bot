@@ -132,7 +132,7 @@ def init_bot():
             print('media number: {}  created_at: {}'.format(image_count, tweet.created_at))
 
             title = ' '.join([item for item in tweet.full_text.split(' ') if 'https' not in item]).replace('.', '')
-            title = ' '.join(title.replace('\r', '. ').replace('\n', '. ').split())
+            title = ' '.join(title.replace('\r', '. ').replace('\n', '. ').split()).replace("@", "")
 
             if  any(stopword.lower() in title.lower() for stopword in stopwords):
                 continue
