@@ -29,7 +29,7 @@ ACCESS_TOKEN_SECRET = (os.environ['ACCESS_TOKEN_SECRET'
                        ] if 'ACCESS_TOKEN_SECRET'
                        in os.environ else ''
                        )
-SUBREDDIT = 'mejico'
+SUBREDDIT = 'lazonacero'
 
 
 STOPWORDS = './stopwords.txt'
