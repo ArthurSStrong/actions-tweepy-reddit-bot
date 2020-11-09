@@ -1,0 +1,4 @@
+#NuevoPoster
+#Estreno
+#Vistazo
+#Noticia
