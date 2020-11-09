@@ -41,4 +41,4 @@ jobs:
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: |
           pip install -r requirements.txt
-          python script_remote:media.py
+          python script_remote_media.py
