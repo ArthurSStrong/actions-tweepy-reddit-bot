@@ -134,10 +134,10 @@ def init_bot():
             title = ' '.join([item for item in tweet.full_text.split(' ') if 'https' not in item]).replace('.', '')
             title = ' '.join(title.replace('\r', '. ').replace('\n', '. ').split())
 
-            if  any(stopword in title.lower() for stopword in stopwords):
+            if  any(stopword.lower() in title.lower() for stopword in stopwords):
                 continue
 
-            if  any(approved_tag in title.lower() for approved_tag in approved_tags) and (image_count and image_count < 2 and tweet.created_at >= tolerance_time):
+            if  any(approved_tag.lower() in title.lower() for approved_tag in approved_tags) and (image_count and image_count < 2 and tweet.created_at >= tolerance_time):
 
                 print("submitting {}".format(title))
                 reddit.subreddit(SUBREDDIT).submit(title=title,
