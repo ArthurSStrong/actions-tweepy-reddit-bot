@@ -4,7 +4,7 @@ name: Reddit RSS News Bot
 # be triggered using cron set at a 10 minutes interval.
 on:
   schedule:
-    - cron: "0 0 1 */3 *"
+    - cron: "0 */6 * * *"
 
 # 'jobs' are the routines, we only have
 # one when the instance is built.
@@ -41,9 +41,4 @@ jobs:
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: |
           pip install -r requirements.txt
-          python script_remote.py
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "Updated logs."
-          git push
+          python script_remote:media.py
