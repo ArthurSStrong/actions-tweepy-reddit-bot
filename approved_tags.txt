@@ -1,4 +1,10 @@
-#NuevoPoster
-#Estreno
-#Vistazo
-#Noticia
+serie
+corto
+disponible
+episodio
+netflix
+filme
+proyecto
+cartoon
+poster
+póster 
